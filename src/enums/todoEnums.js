@@ -1,0 +1,6 @@
+export const TOTO_ENUMS = {
+  TODO: "TODO",
+  IN_PROGRESS: "IN_PROGRESS",
+  COMPLETED: "COMPLETED",
+  REVIEW: "REVIEW",
+};
