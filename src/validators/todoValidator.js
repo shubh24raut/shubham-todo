@@ -16,6 +16,7 @@ export const todoValidationRules = [
     .withMessage("Description must be 500 characters or fewer"),
   body("status")
     .optional()
+    .default(TOTO_ENUMS.TODO)
     .isIn(Object.values(TOTO_ENUMS))
     .withMessage(`Status must be one of: ${Object.values(TOTO_ENUMS).join(", ")}`),
 ];

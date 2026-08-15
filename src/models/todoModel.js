@@ -1,4 +1,6 @@
 import { totoData } from "../db.js";
+import { TOTO_ENUMS } from "../enums/todoEnums.js";
+
 
 export const getTodos = () => totoData;
 
@@ -6,7 +8,8 @@ export const getTodoById = (id) => {
   return totoData.find((todo) => todo.id === id) || null;
 };
 
-export const createTodo = ({ title, desc, status }) => {
+
+export const createTodo = ({ title, desc, status = TOTO_ENUMS.TODO }) => {
   const nextId = totoData.length ? Math.max(...totoData.map((todo) => todo.id)) + 1 : 1;
   const newTodo = {
     id: nextId,
